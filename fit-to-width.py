@@ -31,6 +31,24 @@ three
 
 def fit_to_width(string, limit):
     """Print string within a character limit."""
+    words = list(string.split())[::-1]
+    lines = []
+
+    current_line = []
+    while words:
+        word = words[-1]
+        if len(' '.join(current_line + [word])) <= limit:
+            current_line.append(words.pop())
+
+        else:
+            if current_line:
+                lines.append(' '.join(current_line))
+            current_line = []
+
+    lines.append(' '.join(current_line))
+
+    for line in lines:
+        print(line)
 
 
 if __name__ == '__main__':
