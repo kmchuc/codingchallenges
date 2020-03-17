@@ -37,7 +37,7 @@ def has_balanced_parens(phrase):
         parentheses = parentheses + 1 
 
       elif character == ")":
-        parentheses = parentheses +1
+        parentheses = parentheses -1
 
         if parentheses < 0:
           return False
