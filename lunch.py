@@ -78,6 +78,20 @@ Consider our most complex case::
 
 """
 
+def most_carrots(cells, garden, numcol, numrows):
+    """to find the cell with the most carrots"""
+
+    valid = [(row, colmn) for row, colmn in cells
+            if 0 <= row < numrows and 0 <= colmn < numcol]
+
+    num_carrots = 0
+    most = None
+
+    for row, colmn in valid:
+        if num_carrots < 
+
+
+
 
 def lunch_count(garden):
     """Given a garden of nrows of ncols, return carrots eaten."""
@@ -93,6 +107,7 @@ def lunch_count(garden):
 
     nrows = len(garden)
     ncols = len(garden[0])
+
 
 if __name__ == '__main__':
     import doctest
